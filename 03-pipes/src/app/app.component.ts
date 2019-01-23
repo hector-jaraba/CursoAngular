@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'pipes';
   nombre = "Héctor";
+  nombre2 = "héctOr jarAba romEro"
   arreglo = [1,2,3,4,5,6,7,8,9,10];
   PI = Math.PI;
   a = 0.234;
@@ -26,4 +27,12 @@ export class AppComponent {
   valorDePromesa = new Promise( (resolve, reject) =>{
     setTimeout(()=>resolve('Llegaron los datos!'), 3500);
   });
+
+  fecha:Date = new Date();
+
+  video = "AR1tLGQ7COs";
+
+  prueba = "Prueba";
+
+  activar = true;
 }

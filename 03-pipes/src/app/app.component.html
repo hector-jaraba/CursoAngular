@@ -63,10 +63,44 @@
         </tr>
 
         <tr>
-            <td>{{valorDePromesa}}</td>
-            <td>async</td>
-            <td>{{valorDePromesa|async}}</td>
-          </tr>
+          <td>{{valorDePromesa}}</td>
+          <td>async</td>
+          <td>{{valorDePromesa|async}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date</td>
+          <td>{{fecha  | date }}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'medium'</td>
+          <td>{{fecha  | date:'medium' }}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>async:'MMMM - dd'</td>
+          <td>{{fecha  | date:'MMMM - dd' }}</td>
+        </tr>
+        <tr>
+          <td>{{nombre2}}</td>
+          <td>capitalizado</td>
+          <td>{{nombre2 | capitalizado}}</td>
+        </tr>
+        <tr>
+          <td>{{nombre2}}</td>
+          <td>capitalizado:false</td>
+          <td>{{nombre2 | capitalizado:false}}</td>
+        </tr>
+        <tr>
+          <td>{{prueba}}</td>
+          <td>
+            contrasena: {{activar}}
+            <br>
+            <button (click)="activar = !activar" type="button" class="btn btn-outline-primary">activar/desactivar</button>
+          </td>
+          <td>{{prueba | contrasena:activar}}</td>
+        </tr>
       </tbody>
     </table>
 
@@ -77,5 +111,7 @@
 
     <h4>JSON</h4>
     <pre>{{heroe| json}}</pre>
+
+    <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/' " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
 </div>
