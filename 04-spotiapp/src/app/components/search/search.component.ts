@@ -9,12 +9,19 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class SearchComponent {
 
   artists:any[] = [];
+  loading: boolean;
 
-  constructor(private spotify: SpotifyService) { }
+  constructor(private spotify: SpotifyService) {
+    this.loading = false;
+   }
 
   buscar(termino: string){
-    this.spotify.getArtista(termino)
-        .subscribe( (data:any) =>  this.artists = data );
+    this.loading = true;
+    this.spotify.getArtistas(termino)
+        .subscribe( (data:any) => {
+          this.artists = data;
+          this.loading = false;
+        } );
   }
 
 }
