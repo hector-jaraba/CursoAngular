@@ -6,18 +6,21 @@ import { ROUTES } from './app.routes';
 
 import { HttpClientModule } from '@angular/common/http';
 
-
+//Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-
-//Pipes
-import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { ArtistComponent } from './components/artist/artist.component';
+
+//Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import {DomseguroPipe} from './pipes/domseguro.pipe'
+
+
 
 
 @NgModule({
@@ -28,6 +31,7 @@ import { ArtistComponent } from './components/artist/artist.component';
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
+    DomseguroPipe,
     TarjetasComponent,
     LoadingComponent,
     ArtistComponent
