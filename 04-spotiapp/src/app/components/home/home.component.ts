@@ -12,11 +12,13 @@ export class HomeComponent implements OnInit {
 
   albums: any[] = []
   loading: boolean;
+  error:boolean;
+  mensajeError: string; 
 
   constructor(private http: HttpClient, private spotify:SpotifyService ) {
 
     this.loading = true;
-
+    this.error = false;
     // this.http.get('https://restcountries.eu/rest/v2/lang/es')
     //       .subscribe((resp:any) => {
     //         this.paises = resp;
@@ -27,6 +29,10 @@ export class HomeComponent implements OnInit {
         .subscribe((data:any) =>{
           this.albums = data;
           this.loading = false;
+        },(errorServicio)=> {
+          this.error = true;
+          this.loading = false;
+          this.mensajeError = errorServicio.error.error.message;
         });
   }
 
