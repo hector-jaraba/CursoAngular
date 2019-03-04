@@ -1,21 +1,12 @@
+<app-navbar></app-navbar>
+
 <div class="container">
   <h1 [ngStyle]="{'font-size.em': fontSize, 'color':color}">Demos <small>angular</small></h1>
   <hr>
-<!--
-  <button (click)="increment()">Increment size</button>
-  <button (click)="decrement()">Decrement size</button>
 
-  <button class="btn btn-info m-5" (click)="colorize()">Colorize</button>
 
-  <hr>
-
-  <app-ng-style></app-ng-style> -->
-
- <!-- <app-css></app-css>
-
-  <p>Hola mundo desde app.component</p> -->
-
-  <app-clases></app-clases>
+  <router-outlet></router-outlet>
+  
 
 </div>
 
