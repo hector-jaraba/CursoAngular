@@ -1,0 +1,31 @@
+<!--
+<h1>Top Films</h1>
+
+<div class="card-columns">
+  <div class="card" *ngFor="let film of topFilms">
+    <img src="{{film.poster_path | imgMDB}}" class="card-img-top img-responsive" alt="{{film.title}}">
+    <div class="card-body">
+      <h5 class="card-title">{{film.title}}</h5>
+      <p class="card-text">{{film.overview | excerpt:20}}</p>
+      <p class="card-text"><small class="text-muted">{{film.release_date}}</small></p>
+    </div>
+  </div>
+</div>
+-->
+
+<h1>Top Trending: <small>{{trendingTime}}</small></h1>
+<div class="row">
+    <button (click)="getTrending('day')" type="button" class="btn btn-primary m-5">day</button>
+    <button (click)="getTrending('week')"  type="button" class="btn btn-primary m-5">week</button>
+</div>
+
+<div class="card-columns">
+  <div (click)="showFilm(film.id)" class="card" *ngFor="let film of topTrendingFilms">
+    <img src="{{film.poster_path | imgMDB}}" class="card-img-top img-responsive" alt="{{film.title}}">
+    <div class="card-body">
+      <h5 class="card-title">{{film.title}}</h5>
+      <p class="card-text">{{film.overview | excerpt:20}}</p>
+      <p class="card-text"><small class="text-muted">{{film.release_date}}</small></p>
+    </div>
+  </div>
+</div>

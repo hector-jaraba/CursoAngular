@@ -1,0 +1,12 @@
+<h1> Resultados para: <small>{{this.movieName}}</small></h1>
+
+<div class="card-columns">
+  <div (click)="showFilm(film.id)" class="card" *ngFor="let film of movies">
+    <img src="{{film.poster_path | imgMDB}}" class="card-img-top img-responsive" alt="{{film.title}}">
+    <div class="card-body">
+      <h5 class="card-title">{{film.title}}</h5>
+      <p class="card-text">{{film.overview | excerpt:20}}</p>
+      <p class="card-text"><small class="text-muted">{{film.release_date}}</small></p>
+    </div>
+  </div>
+</div>

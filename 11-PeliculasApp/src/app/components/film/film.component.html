@@ -1,0 +1,18 @@
+<div class="row">
+  
+  <div class="col-md-3">
+      <h1>{{movie.title}}</h1>
+    <img class="img-fluid" src="{{movie.poster_path | imgMDB}}" alt="{{movie.title}}">
+
+  </div>
+  <div class="col m-5">
+    <p>
+      {{movie.overview}}
+    </p>
+    <p>
+      genres: 
+      <span class="badge badge-warning m-1" *ngFor="let genre of movie.genres">{{genre.name}}</span>
+    </p>
+  </div>
+
+</div>
