@@ -8,6 +8,9 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [],
@@ -18,7 +21,10 @@ import {MatCardModule} from '@angular/material/card';
     MatCheckboxModule,
     MatToolbarModule,
     MatProgressBarModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatInputModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -26,7 +32,10 @@ import {MatCardModule} from '@angular/material/card';
     MatCheckboxModule,
     MatToolbarModule,
     MatProgressBarModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
